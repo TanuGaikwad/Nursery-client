@@ -11,7 +11,7 @@ const [plants, setPlants ] = useState([])
 
 const loadPlants = async () => {
 toast.loading("Loading plants...")
-const response = await axios.get('http://localhost:8000/plants')
+const response = await axios.get(`https://nursery-server-vyu6.onrender.com/plants`)
 toast.dismiss()
 toast.success("Plants loaded successfully")
 setPlants(response.data.data)
